@@ -3,6 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
 /*------style principaux de la page------*/
+body {
+  background-color: $white-color;
+  color: $text-grey;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+a {
+  color: $text-grey;
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -125,7 +144,7 @@ main {
     }
   
     hgroup {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 }
 
