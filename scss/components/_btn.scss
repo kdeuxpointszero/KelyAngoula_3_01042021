@@ -1,0 +1,56 @@
+/*---bouton retour---*/
+ .back_btn {
+    display: block;
+    left: 20px;
+    position: absolute;
+    top: 30px;
+  }
+
+/*---bouton explorer---*/
+
+.explorer_button {
+    margin-bottom: 30px;
+    background: $btn1-color;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: $btn1-shadow;
+    box-sizing: border-box;
+    color: $white-color;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 .3em .3em 0;
+    padding: $btn-padding;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s;
+  
+    &:hover {
+      background: linear-gradient(lighten($secondary, 5), lighten($primary, 5));
+      box-shadow: $btn1-shadow-hover;
+    }
+    
+    &a {
+      color: $white-color;
+    }
+  }
+
+/*---bouton nouveau---*/  
+
+.new_button {
+    background-color: $tertiary;
+    color: darken($tertiary, 35);
+    font-weight: bold;
+    padding: 3px 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+  }
+
+/*---bouton commander---*/
+
+.order_btn {
+    margin-bottom: 20px;
+    text-align: center;
+  }
