@@ -1,5 +1,4 @@
 /*colors*/
-/*width*/
 /*buttons*/
 /*cards*/
 /*---bouton retour---*/
@@ -12,7 +11,7 @@
 }
 
 /*---bouton explorer---*/
-.explorer_button {
+.btn_1 {
   margin-bottom: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
@@ -34,14 +33,14 @@
   transition: .2s;
 }
 
-.explorer_button:hover {
+.btn_1:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background: linear-gradient(#ff93e1, #a16be0);
   -webkit-box-shadow: 0 5px 15px 0 #9d9d9d;
           box-shadow: 0 5px 15px 0 #9d9d9d;
 }
 
-.explorer_buttona {
+.btn_1a {
   color: #fff;
 }
 
@@ -50,7 +49,8 @@
   background-color: #99e2d0;
   color: #2c9c81;
   font-weight: bold;
-  padding: 3px 10px;
+  border-radius: 10%;
+  padding: 3px 5px;
   position: absolute;
   right: 10px;
   top: 10px;
@@ -63,12 +63,147 @@
   text-align: center;
 }
 
-/*------style principaux de la page------*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 16px;
+  margin: 0;
+  outline-style: none;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+*:focus,
+*:visited,
+*:focus-within,
+*:focus-visible,
+*:hover {
+  border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+strong {
+  font-size: 19px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*-----base----*/
 body {
   background-color: #fff;
   color: #333;
   font-family: Roboto, sans-serif;
-  font-size: 14px;
+  font-size: .875rem;
   line-height: 1.5;
   margin: 0;
   text-align: left;
@@ -76,13 +211,17 @@ body {
 
 a {
   color: #333;
-  text-decoration: none;
 }
 
-a:visited {
-  color: inherit;
+.background_grey {
+  background-color: #f6f6f6;
 }
 
+.full_width {
+  width: 100%;
+}
+
+/*------style principaux de la page------*/
 h1 {
   font-size: 24px;
   font-weight: bold;
@@ -167,13 +306,13 @@ header .logo {
   margin: auto;
 }
 
-header .logo {
+header .cover_img {
   height: 270px;
   width: 100%;
   z-index: -1;
 }
 
-header .logo img {
+header .cover_img img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -183,28 +322,28 @@ header .logo img {
 .search_location[type='text']::-webkit-input-placeholder {
   color: #333;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .search_location[type='text']:-ms-input-placeholder {
   color: #333;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .search_location[type='text']::-ms-input-placeholder {
   color: #333;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .search_location[type='text']::placeholder {
   color: #333;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-/*------MAIN SECTION------*/
+/*------main section------*/
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -233,12 +372,16 @@ main {
 
 .reserve h2 {
   color: #888;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 20px 15px;
 }
 
 .reserve hgroup {
+  margin-bottom: 30px;
+}
+
+.reserve .btn_1 {
   margin-bottom: 30px;
 }
 
@@ -331,14 +474,14 @@ aside .step_button:hover .icon {
           flex: 1 0 0;
 }
 
-.home main .restaurant_card {
+.home main .card {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
 }
 
-/*-----restaurants choices------*/
-.restaurants_choices {
+/*-----cards------*/
+.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,13 +497,13 @@ aside .step_button:hover .icon {
   padding: 15px;
 }
 
-.restaurants_choices h2 {
+.cards h2 {
   padding: 15px 0 15px 15px;
   width: 100%;
 }
 
-/*------restaurant card------*/
-.restaurant_card {
+/*------card css------*/
+.card {
   background-color: #fff;
   -webkit-box-shadow: 2px 2px 10px 2px #e0e0e0;
           box-shadow: 2px 2px 10px 2px #e0e0e0;
@@ -380,15 +523,15 @@ aside .step_button:hover .icon {
   word-wrap: break-word;
 }
 
-.restaurant_card h3 {
+.card h3 {
   font-weight: bold;
 }
 
-.restaurant_card h4 {
+.card h4 {
   font-weight: normal;
 }
 
-/*------menu------*/
+/*------page menu------*/
 .menu main {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -398,10 +541,10 @@ aside .step_button:hover .icon {
 
 .menu .cards {
   background-color: transparent;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin-left: 0;
   margin-right: 0;
 }
@@ -418,9 +561,9 @@ aside .step_button:hover .icon {
 }
 
 .menu .title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
-  padding-left: 0;
+  padding-left: 10px;
   width: 100%;
 }
 
@@ -437,14 +580,14 @@ aside .step_button:hover .icon {
   border-radius: 15px;
 }
 
-.card_img .restaurant_card_choice {
+.card_img .card_choice {
   max-height: 200px;
   position: relative;
 }
 
 .card_img img {
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   max-height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -500,7 +643,7 @@ aside .step_button:hover .icon {
 }
 
 .card_menu h3 {
-  font-size: 1.125rem;
+  font-size: 18px;
   margin: 0 0 5px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -509,7 +652,7 @@ aside .step_button:hover .icon {
 
 .card_menu h4 {
   color: #333;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: normal;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -530,7 +673,7 @@ aside .step_button:hover .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: bold;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -556,7 +699,7 @@ footer .footer_container {
   max-width: 100%;
 }
 
-footer .foooter_logo img {
+footer .footer_logo img {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
