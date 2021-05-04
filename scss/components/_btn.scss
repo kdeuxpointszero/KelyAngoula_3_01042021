@@ -8,7 +8,7 @@
 
 /*---bouton explorer---*/
 
-.explorer_button {
+.btn_1 {
     margin-bottom: 30px;
     background: $btn1-color;
     border: 0;
@@ -41,7 +41,8 @@
     background-color: $tertiary;
     color: darken($tertiary, 35);
     font-weight: bold;
-    padding: 3px 10px;
+    border-radius: 10%;
+    padding: 3px 5px;
     position: absolute;
     right: 10px;
     top: 10px;
