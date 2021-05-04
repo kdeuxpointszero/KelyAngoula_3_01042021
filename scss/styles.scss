@@ -1,27 +1,9 @@
 @import "./utils/variables";
 @import "./components/btn";
+@import "./base/reset";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
 /*------style principaux de la page------*/
-body {
-  background-color: $white-color;
-  color: $text-grey;
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0;
-  text-align: left;
-}
-
-a {
-  color: $text-grey;
-  text-decoration: none;
-
-  &:visited {
-    color: inherit;
-  }
-}
-
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -46,14 +28,13 @@ h1 {
     font-size: 14px;
     font-weight: bold;
   }
-
   /*------header section------*/
   header {
     align-items: center;
     display: flex;
     flex-flow: column wrap;
     margin: auto;
-    max-width: $wrapper;
+    max-width: 1440px;
     padding-top: 10px;
     position: relative;
   
@@ -94,7 +75,7 @@ h1 {
     margin: auto;
   }
   
-  .logo {
+  .cover_img {
     height: 270px;
     width: 100%;
     z-index: -1;
@@ -106,24 +87,25 @@ h1 {
     }
   }  
 }
+
 .search_location {
   &[type='text'] {
 
     &::placeholder {
       color: $text-grey;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: bolder;
     }
   }
 }
 
-/*------MAIN SECTION------*/
+/*------main section------*/
 main {
   display: flex;
   flex-flow: column nowrap;
   margin-left: auto;
   margin-right: auto;
-  max-width: $wrapper;
+  max-width: 1440px;
 }
 
 .reserve {
@@ -138,12 +120,16 @@ main {
   
     h2 {
       color: $text-grey-light;  
-      font-size: 1.125rem;
+      font-size: 18px;
       font-weight: normal;
       margin: 20px 15px;
     }
   
     hgroup {
+      margin-bottom: 30px;
+    }
+
+    .btn_1 {
       margin-bottom: 30px;
     }
 }
@@ -222,13 +208,13 @@ aside {
       flex: 1 0 0;
     }
     
-    .restaurant_card {
+    .card {
       flex: 1 0 0;
     }
   }
 }
-/*-----restaurants choices------*/
-.restaurants_choices {
+/*-----cards------*/
+.cards {
   display: flex;
   flex-flow: row wrap;
   flex-wrap: wrap;
@@ -242,8 +228,8 @@ aside {
     width: 100%;
   }
 }
-/*------restaurant card------*/
-.restaurant_card {
+/*------card css------*/
+.card {
   background-color: $white-color;
   box-shadow: $card-shadow;
   display: flex;
@@ -263,7 +249,7 @@ aside {
   }
 }
 
-/*------menu------*/
+/*------page menu------*/
 
 .menu {
   main {
@@ -275,7 +261,7 @@ aside {
 
   .cards {
     background-color: transparent;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     margin-left: 0;
     margin-right: 0;
   }
@@ -292,9 +278,9 @@ aside {
   }
 
   .title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
-    padding-left: 0;
+    padding-left: 10px;
     width: 100%;
 
     &::after {
@@ -312,31 +298,32 @@ aside {
 .card_img {
   border-radius: 15px;
 
-    .restaurant_card_choice {
+    .card_choice {
       max-height: 200px;
       position: relative;
-    }
+    }  
+
     img {
-      border-top-left-radius: 1em;
-      border-top-right-radius: 1em;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
       max-height: 200px;
       object-fit: cover;
       width: 100%;
     }
 
     .card_content {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      padding: 10px;
-      width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    width: 100%;
     
-      .card_caption {
-        flex: 0 0 85%;
-      }
+    .card_caption {
+      flex: 0 0 85%;
     }
-  } 
-
+  }
+}  
+   
 .card_menu {
   border-radius: 15px;
   cursor: pointer;
@@ -346,7 +333,6 @@ aside {
   justify-content: space-between;
   overflow: hidden;
 
-    
   hgroup {
     flex: 1;
     overflow: hidden;
@@ -356,7 +342,7 @@ aside {
   }
 
   h3 {
-    font-size: 1.125rem;
+    font-size: 18px;
     margin: 0 0 5px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -365,7 +351,7 @@ aside {
 
   h4 {
     color: $text-grey;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: normal;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -382,7 +368,7 @@ aside {
   .price {
     align-items: center;
     display: flex;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: bold;
     justify-content: flex-end;
     padding-right: 10px;
@@ -406,7 +392,7 @@ footer {
     max-width: 100%;
   }
 
-  .foooter_logo {
+  .footer_logo {
     img {
       filter: invert(1);
     }
