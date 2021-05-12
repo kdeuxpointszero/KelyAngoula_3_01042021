@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./components/btn";
 @import "./base/reset";
+@import "./utils/animations";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
 /*------style principaux de la page------*/
@@ -242,6 +243,7 @@ aside {
 
   h3 {
     font-weight: bold;
+    font-size: 16px;
   }
 
   h4 {
@@ -299,7 +301,6 @@ aside {
   border-radius: 15px;
 
     .card_choice {
-      max-height: 200px;
       position: relative;
     }  
 
