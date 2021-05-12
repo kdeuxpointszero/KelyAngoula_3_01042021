@@ -221,6 +221,221 @@ a {
   width: 100%;
 }
 
+/* checkbox animation rotate */
+@-webkit-keyframes check_box {
+  10% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  20% {
+    -webkit-transform: rotate(-75deg) scale(1.03);
+            transform: rotate(-75deg) scale(1.03);
+  }
+  40% {
+    -webkit-transform: rotate(-60deg) scale(1.08);
+            transform: rotate(-60deg) scale(1.08);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) scale(1.15);
+            transform: rotate(-45deg) scale(1.15);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg) scale(1.08);
+            transform: rotate(-30deg) scale(1.08);
+  }
+  100% {
+    -webkit-transform: rotate(5deg) scale(1);
+            transform: rotate(5deg) scale(1);
+  }
+}
+@keyframes check_box {
+  10% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  20% {
+    -webkit-transform: rotate(-75deg) scale(1.03);
+            transform: rotate(-75deg) scale(1.03);
+  }
+  40% {
+    -webkit-transform: rotate(-60deg) scale(1.08);
+            transform: rotate(-60deg) scale(1.08);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) scale(1.15);
+            transform: rotate(-45deg) scale(1.15);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg) scale(1.08);
+            transform: rotate(-30deg) scale(1.08);
+  }
+  100% {
+    -webkit-transform: rotate(5deg) scale(1);
+            transform: rotate(5deg) scale(1);
+  }
+}
+
+@keyframes check_box {
+  0% {
+    opacity: .5;
+    -webkit-transform: translate(50px, 0);
+            transform: translate(50px, 0);
+  }
+  20% {
+    opacity: .6;
+    -webkit-transform: translate(30px, 0);
+            transform: translate(30px, 0);
+  }
+  40% {
+    opacity: .7;
+    -webkit-transform: translate(20px, 0);
+            transform: translate(20px, 0);
+  }
+  60% {
+    opacity: .8;
+    -webkit-transform: translate(15px, 0);
+            transform: translate(15px, 0);
+  }
+  80% {
+    opacity: .9;
+    -webkit-transform: translate(7px, 0);
+            transform: translate(7px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(1px, 0);
+            transform: translate(1px, 0);
+  }
+}
+
+@-webkit-keyframes check_box_price {
+  0% {
+    -webkit-transform: translate(50px, 0);
+            transform: translate(50px, 0);
+  }
+  40% {
+    -webkit-transform: translate(25px, 0);
+            transform: translate(25px, 0);
+  }
+  70% {
+    -webkit-transform: translate(12px, 0);
+            transform: translate(12px, 0);
+  }
+  100% {
+    -webkit-transform: translate(1px, 0);
+            transform: translate(1px, 0);
+  }
+}
+
+@keyframes check_box_price {
+  0% {
+    -webkit-transform: translate(50px, 0);
+            transform: translate(50px, 0);
+  }
+  40% {
+    -webkit-transform: translate(25px, 0);
+            transform: translate(25px, 0);
+  }
+  70% {
+    -webkit-transform: translate(12px, 0);
+            transform: translate(12px, 0);
+  }
+  100% {
+    -webkit-transform: translate(1px, 0);
+            transform: translate(1px, 0);
+  }
+}
+
+/*menu cards checkbox css*/
+.card_menu:hover {
+  -webkit-box-shadow: 0 5px 15px 0 #9d9d9d;
+          box-shadow: 0 5px 15px 0 #9d9d9d;
+}
+
+.card_menu:hover hgroup {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card_menu:hover .price {
+  -webkit-animation: caption-check-box-price ease .3s;
+          animation: caption-check-box-price ease .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  min-width: 50px;
+}
+
+.card_menu:hover .check_box {
+  -webkit-animation: caption-check-box ease .3s;
+          animation: caption-check-box ease .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  background-color: #99e2d0;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  max-width: 50px;
+  overflow: hidden;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.card_menu:hover .fa-check-circle {
+  -webkit-animation: check-box ease .5s;
+          animation: check-box ease .5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  background-color: #99e2d0;
+  left: 27%;
+  position: absolute;
+  top: 30%;
+}
+
+/*heart button*/
+.like {
+  position: relative;
+}
+
+.like .hover_icon {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.like i {
+  color: #9d9d9d;
+  font-size: 24px;
+  left: 50%;
+}
+
+.like:hover {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.like:hover .default_icon {
+  opacity: 0;
+  -webkit-transition: .5s 0s ease;
+  transition: .5s 0s ease;
+}
+
+.like:hover .hover_icon {
+  color: #9356dc;
+  opacity: 1;
+  -webkit-transition: .5s 0s ease;
+  transition: .5s 0s ease;
+  z-index: 999;
+}
+
 /*------style principaux de la page------*/
 h1 {
   font-size: 24px;
@@ -525,6 +740,7 @@ aside .step_button:hover .icon {
 
 .card h3 {
   font-weight: bold;
+  font-size: 16px;
 }
 
 .card h4 {
@@ -581,7 +797,6 @@ aside .step_button:hover .icon {
 }
 
 .card_img .card_choice {
-  max-height: 200px;
   position: relative;
 }
 
